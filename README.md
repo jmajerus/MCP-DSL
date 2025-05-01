@@ -89,6 +89,8 @@ mcp-dsl/
 - [ ] Publish docs and examples
 
 ## 🤝 Join Us
+If you're excited about shaping the future of AI tooling and interoperability, you're in the right place. We're actively building support for multi-language code generation — including Python, Rust, Go, and more — and welcome contributors with expertise or interest in any programming language. Contributions, ideas, and feedback are all welcome.
+
 If you're passionate about making AI orchestration safer, clearer, and more elegant, you're in the right place. Contributions, ideas, and feedback are all welcome.
 
 ## 📜 License
