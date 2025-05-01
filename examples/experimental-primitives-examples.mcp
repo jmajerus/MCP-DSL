@@ -1,0 +1,41 @@
+// Experimental MCP-DSL Examples for Candidate Primitives
+
+// === agent ===
+agent ResearchAgent {
+  goal: analyze and annotate research papers
+  context: Session
+  plan:
+    - interaction: fetchMetadata
+    - interaction: extractHighlights
+    - interaction: tagWithKeywords
+}
+
+// === stateflow ===
+stateflow Session {
+  state: unauthenticated -> authenticated on login
+  state: authenticated -> expired on timeout
+}
+
+// === validate ===
+interaction registerUser(email: String, password: String) -> Session {
+  validate email: isValidEmail
+  validate password: isStrongPassword
+  use AccountCreator
+  bind output.user to Session.user
+}
+
+// === chain ===
+chain processQuery(query: String) -> Session {
+  steps:
+    - interaction: retrieveDocs
+    - interaction: summarize
+    - interaction: respondWithAnswer
+}
+
+// === resource ===
+resource embeddingsStore: Qdrant
+resource documentAPI: HTTP
+
+// === event ===
+event onDocumentUpload -> interaction ingestNewDoc
+
