@@ -1,0 +1,31 @@
+{# templates/python_class.j2 #}
+
+{%- for model in models %}
+# Model: {{ model.name }}
+class {{ model.name }}:
+    def __init__(self):
+        pass
+
+{% endfor %}
+
+{%- for ctx in contexts %}
+# Context: {{ ctx.name }}
+class {{ ctx.name }}:
+    def __init__(self):
+        {%- for field in ctx.fields %}
+        self.{{ field.name }} = None  # type: {{ field.field_type }}
+        {%- endfor %}
+{% endfor %}
+
+{%- for inter in interactions %}
+# Interaction: {{ inter.name }}
+def {{ inter.name }}({{ inter.args | map(attribute='name') | join(', ') }}):
+    # TODO: implement logic
+    {%- for stmt in inter.body %}
+    {%- if stmt.type == "Use" %}
+    model = {{ stmt.model_name }}()
+    {%- elif stmt.type == "Bind" %}
+    # bind {{ stmt.from }} to {{ stmt.to }}
+    {%- endif %}
+    {%- endfor %}
+{% endfor %}

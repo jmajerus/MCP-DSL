@@ -1,0 +1,14 @@
+model Summarizer {
+  input: text: String
+  output: summary: String
+}
+
+context Session {
+  user: User
+  lastSummary: String?
+}
+
+interaction summarize(text: String) -> Session {
+  use Summarizer
+  bind output.summary to Session.lastSummary
+}
