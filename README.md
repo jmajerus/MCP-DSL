@@ -82,9 +82,10 @@ mcp-dsl/
 ```
 
 ## 🛠️ Roadmap
-- [x] Define PEG.js grammar
+- [x] Define PEG.js grammar (being transitioned to ANTLR grammar)
 - [ ] Implement parser and AST builder
 - [ ] Build code generators for Python and Rust
+- [ ] Add support for additional language targets (Go, TypeScript, Kotlin, etc.) with idiomatic implementations
 - [ ] Provide CLI and runtime engine
 - [ ] Publish docs and examples
 
