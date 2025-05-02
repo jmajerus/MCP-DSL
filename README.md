@@ -81,6 +81,7 @@ mcp-dsl/
 * [🚧 Error Handling](./docs/error-handling.md)
 * [🔬 Domain Extensions (e.g. bioinformatics)](./docs/domain-extensions.md)
 * [🧠 Retrieval-Augmented Generation](./docs/rag-explainer.md)
+* [🧰 Custom GPTs for MCP-DSL Authoring and Review](./docs/custom-gpt-setup.md)
 * [💭 Issues and Challenges](./docs/issues-and-challenges.md)
 * [🤝 How to Contribute](./docs/contributing.md)
 
