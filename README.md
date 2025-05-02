@@ -58,13 +58,13 @@ mcp-dsl/
 
 ## 📚 Explore the Project
 
-* [📜 MCP-DSL Manifesto](./docs/mcp-dsl%20manifesto.md)
+* [📜 MCP-DSL Manifesto](./docs/mcp-dsl-manifesto.md)
 * [🧱 Core Concepts](./docs/core-concepts.md)
 * [✍️ Syntax Design](./docs/syntax-design-notes.md)
 * [⚙️ Language Architecture](./docs/language-design.md)
 * [🔁 Common Patterns](./docs/patterns-library.md)
 * [🧵 Async & Concurrency](./docs/concurrency-and-async.md)
-* [🚧 Error Handling](./docs/error_handling.md)
+* [🚧 Error Handling](./docs/error-handling.md)
 * [🔬 Domain Extensions (e.g. bioinformatics)](./docs/domain-extensions.md)
 * [🧠 Retrieval-Augmented Generation](./docs/rag-explainer.md)
 * [🤝 How to Contribute](./docs/contributing.md)
