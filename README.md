@@ -18,15 +18,24 @@ Whenever high-level orchestration logic is mixed with low-level implementation c
 * ✅ Composable: Reuse and combine model-context patterns
 * ✅ Scalable: Add new models or interactions without breaking structure
 
+
 ## 🧱 Core Concepts
 
-MCP-DSL is structured around three foundational ideas:
+MCP-DSL builds upon the principles of the [Model-Context Protocol (MCP)](https://github.com/anthropics/mcp), extending them into a fully declarative domain-specific language.
 
-* `model`: defines an AI function
-* `context`: holds evolving state
-* `interaction`: connects models to context declaratively
+While MCP provides a structured way for tools and models to coordinate via messaging, MCP-DSL expresses those flows as readable, composable, and traceable declarations.
+
+At its core, MCP-DSL retains the original MCP entities:
+
+- `model`: defines an AI capability
+- `context`: holds evolving shared state
+- `interaction`: connects models to context declaratively
 
 ➡️ [Read full breakdown and examples](./docs/core-concepts.md)
+
+**Note:** MCP-DSL supports both `.mcp` files (strictly MCP-compatible) and `.mcpe` files (MCP-Extended) that introduce powerful constructs such as `agent`, `stateflow`, `retry`, `pattern`, and more.
+
+Use `.mcpe` when defining rich workflows or domain-specific orchestration logic. Legacy tools expecting `.mcp` will safely ignore these extensions.
 
 ## 🗂️ Project Structure
 
@@ -46,6 +55,11 @@ mcp-dsl/
 ├── tests/                    # Unit tests for parser and codegen
 └── docs/                     # Documentation and specifications
 ```
+
+## 🗂️ Project Structure
+
+
+
 
 ## 🛠️ Roadmap
 
@@ -67,6 +81,7 @@ mcp-dsl/
 * [🚧 Error Handling](./docs/error-handling.md)
 * [🔬 Domain Extensions (e.g. bioinformatics)](./docs/domain-extensions.md)
 * [🧠 Retrieval-Augmented Generation](./docs/rag-explainer.md)
+* [💭 Issues and Challenges](./docs/issues-and-challenges.md)
 * [🤝 How to Contribute](./docs/contributing.md)
 
 ## 📎 Grammar Definition

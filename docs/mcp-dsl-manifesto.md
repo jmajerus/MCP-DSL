@@ -78,7 +78,7 @@ AI is leaving the lab. It’s entering medicine, policy, law, logistics, educati
 MCP-DSL is how we get there.
 
 It’s not just a language. It’s a design philosophy.
-It’s the protocol for the post-prompt world.
+It’s the protocol that complements and elevates the prompt.
 
 ---
 
@@ -87,4 +87,4 @@ It’s the protocol for the post-prompt world.
 Build with it. Extend it. Speak it.
 The future of AI is declarative — and readable.
 
-**Prompt less. Protocol more.**
+**Prompts and protocols — better together.**
