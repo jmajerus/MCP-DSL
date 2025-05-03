@@ -1,5 +1,10 @@
 # MCP-DSL: A Declarative Language for Model-Context Interaction
 
+⚠️ **DRAFT IN PROGRESS**
+This project is under active development. Syntax, structure, and features are subject to change as the MCP specification evolves and this DSL matures.
+
+---
+
 ## 🌟 Vision
 
 MCP-DSL is a domain-specific language (DSL) for expressing high-level model and context interaction logic in AI systems. It abstracts away low-level plumbing, enabling developers to describe intent clearly while generating reliable and maintainable backend code.
@@ -11,6 +16,8 @@ Whenever high-level orchestration logic is mixed with low-level implementation c
 * **Interactions** that connect models to context
 * **Protocol rules** for state transitions and binding logic
 
+---
+
 ## 💡 Why MCP-DSL?
 
 * ✅ Declarative: Focus on *what* the model should do, not *how* to wire it
@@ -18,24 +25,32 @@ Whenever high-level orchestration logic is mixed with low-level implementation c
 * ✅ Composable: Reuse and combine model-context patterns
 * ✅ Scalable: Add new models or interactions without breaking structure
 
+---
 
-## 🧱 Core Concepts
+## 🧱 MCP Concepts (Updated)
 
 MCP-DSL builds upon the principles of the [Model-Context Protocol (MCP)](https://github.com/anthropics/mcp), extending them into a fully declarative domain-specific language.
 
-While MCP provides a structured way for tools and models to coordinate via messaging, MCP-DSL expresses those flows as readable, composable, and traceable declarations.
+> 🛑 **Note:** Early drafts of this project were based on a narrow interpretation of MCP (limited to `model`, `context`, and `interaction`). As the MCP spec has evolved to include advanced capabilities such as `tools`, `resources`, `prompts`, `agentic behaviors`, `streaming`, and `authentication`, we are adapting MCP-DSL to match the full scope of the protocol.
 
-At its core, MCP-DSL retains the original MCP entities:
+MCP-DSL expresses these concepts in a clean, high-level language that supports workflows with:
 
-- `model`: defines an AI capability
-- `context`: holds evolving shared state
-- `interaction`: connects models to context declaratively
+* `model`: defines an AI capability
+* `context`: holds evolving shared state
+* `interaction`: connects models to context declaratively
+* `tool`: invokes external functions/APIs
+* `resource`: binds external data (e.g., documents, images)
+* `prompt`: defines reusable prompt templates
+* `agent`: coordinates multi-step plans and autonomous behavior
+* `streaming`, `auth`, `capabilities`: protocol-level flags and metadata
 
 ➡️ [Read full breakdown and examples](./docs/core-concepts.md)
 
 **Note:** MCP-DSL supports both `.mcp` files (strictly MCP-compatible) and `.mcpe` files (MCP-Extended) that introduce powerful constructs such as `agent`, `stateflow`, `retry`, `pattern`, and more.
 
 Use `.mcpe` when defining rich workflows or domain-specific orchestration logic. Legacy tools expecting `.mcp` will safely ignore these extensions.
+
+---
 
 ## 🗂️ Project Structure
 
@@ -56,10 +71,7 @@ mcp-dsl/
 └── docs/                     # Documentation and specifications
 ```
 
-## 🗂️ Project Structure
-
-
-
+---
 
 ## 🛠️ Roadmap
 
@@ -69,6 +81,8 @@ mcp-dsl/
 * [ ] Add support for additional language targets (Go, TypeScript, Kotlin, etc.) with idiomatic implementations
 * [ ] Provide CLI and runtime engine
 * [ ] Publish docs and examples
+
+---
 
 ## 📚 Explore the Project
 
@@ -85,15 +99,21 @@ mcp-dsl/
 * [💭 Issues and Challenges](./docs/issues-and-challenges.md)
 * [🤝 How to Contribute](./docs/contributing.md)
 
+---
+
 ## 📎 Grammar Definition
 
 MCP-DSL is currently defined via ANTLR (with PEG.js legacy support being phased out).
 
 ➡️ [View full grammar and parser design notes](./docs/syntax-design-notes.md)
 
+---
+
 ## 🤝 Join Us
 
 If you're excited about shaping the future of AI tooling and interoperability, you're in the right place. We're actively building support for multi-language code generation — including Python, Rust, Go, and more — and welcome contributors with expertise or interest in any programming language.
+
+---
 
 ## 📜 License
 
