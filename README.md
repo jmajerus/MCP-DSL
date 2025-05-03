@@ -29,7 +29,7 @@ Whenever high-level orchestration logic is mixed with low-level implementation c
 
 ## 🧱 MCP Concepts (Updated)
 
-MCP-DSL builds upon the principles of the [Model-Context Protocol (MCP)](https://github.com/anthropics/mcp), extending them into a fully declarative domain-specific language.
+MCP-DSL builds upon the principles of the [Model Context Protocol (MCP)](https://github.com/anthropics/mcp), extending them into a fully declarative domain-specific language.
 
 > 🛑 **Note:** Early drafts of this project were based on a narrow interpretation of MCP (limited to `model`, `context`, and `interaction`). As the MCP spec has evolved to include advanced capabilities such as `tools`, `resources`, `prompts`, `agentic behaviors`, `streaming`, and `authentication`, we are adapting MCP-DSL to match the full scope of the protocol.
 
@@ -122,3 +122,33 @@ Open-source, MIT-style. Final license TBD based on community discussion.
 ---
 
 > "When high-level and low-level constructs are forced to coexist, abstraction is begging to be born."
+
+---
+
+## ⚠️ Project Status: Paused — with Thanks, Lessons, and Open Doors
+
+> **Note from the Author**
+> This project began as a side exploration after encountering some overly complex or inelegant MCP server scaffolding. With the help of ChatGPT, I rapidly sketched out an ambitious vision: a domain-specific language (MCP-DSL) to declaratively describe model-context orchestration in a more readable, composable, and maintainable way.
+
+Together with GPT, I was able to:
+
+* Draft formal grammars and examples
+* Explore language design patterns
+* Map core MCP features to DSL constructs
+* Reflect critically on syntax, semantics, and practical implementation pathways
+
+However — and this is a mea culpa — **I hadn’t realized that the MCP specification had already evolved far beyond its initial form**. My early assumptions were based on an outdated snapshot of the protocol, and I underestimated the scope of changes that had since been incorporated.
+
+> Continuing meaningfully would now require tight alignment with the current [official spec](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/draft/schema.ts) and a shift in project direction — which goes beyond my available time and attention.
+
+So I’ve chosen to pause here and leave the door open:
+
+### ✅ If You’re Interested in This Space:
+
+* Consider contributing directly to the [MCP project](https://github.com/modelcontextprotocol/modelcontextprotocol)
+* Explore whether DSL-like constructs could aid **tooling**, **validation**, or **example generation**
+* Fork, reuse, or remix this repo — everything here is shared in the spirit of exploration
+
+This project was made possible in large part through ongoing collaboration with ChatGPT. Even if incomplete, it served as a catalyst for learning, critical thinking, and imagining new interfaces between people and protocol-driven AI.
+
+— *\[John Majerus]*
